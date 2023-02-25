@@ -1,5 +1,3 @@
 ---
-title: Welcome to my blog
+title: Home Page
 ---
-
-*Just doing an initial test :)*
