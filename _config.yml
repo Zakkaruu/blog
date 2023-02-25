@@ -1,11 +1,11 @@
 title: Zach's Blog
-author:
-  name: Zach M. (zakkaru)
+# author:
+#   name: Zach M. (zakkaru)
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
-description: >
-  Zach's Blog, covering IT topics with a focus on networking and security.
+# description: >
+#  Zach's Blog, covering IT topics with a focus on networking and security.
 # Build settings
 
 theme: minima
