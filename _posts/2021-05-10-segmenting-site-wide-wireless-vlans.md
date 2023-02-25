@@ -3,8 +3,6 @@ layout: post
 title: Segmenting Site-Wide Wireless VLANs
 date: 2021-05-10 13:05
 author: zakkaru
-comments: true
-categories: [Juniper, Networking, PowerShell, Professional, Projects, VLAN, Wireless]
 ---
 <!-- wp:group -->
 <div class="wp-block-group"><!-- wp:heading -->
