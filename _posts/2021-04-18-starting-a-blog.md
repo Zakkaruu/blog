@@ -3,8 +3,6 @@ layout: post
 title: Starting a Blog
 date: 2021-04-18 10:21
 author: zakkaru
-comments: true
-categories: [Fluff]
 ---
 <!-- wp:paragraph -->
 <p>Hello world!</p>
