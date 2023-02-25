@@ -3,8 +3,6 @@ layout: post
 title: Setting up a Trunk Port for use with VMware Workstation
 date: 2021-06-16 15:02
 author: zakkaru
-comments: true
-categories: [Juniper, Lab, Networking, Tutorials, Virtualization, VMware, Windows]
 ---
 <!-- wp:heading -->
 <h2>Introduction</h2>
