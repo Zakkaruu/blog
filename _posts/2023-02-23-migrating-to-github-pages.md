@@ -1,6 +1,7 @@
 ---
 title: "Migrating to GitHub Pages"
 date: 2023-02-23
+layout: post
 ---
 
 This is a quick update to let you know I’ll be moving my blog to GitHub pages. The reasoning is that I do not need the paid WordPress features to provide the content I currently offer. The migration will break existing links. I will be migrating all of the posts, so no content will be lost.
