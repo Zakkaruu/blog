@@ -2,7 +2,6 @@
 layout: post
 title: Segmenting Site-Wide Wireless VLANs
 date: 2021-05-10 13:05
-author: zakkaru
 ---
 <!-- wp:group -->
 <div class="wp-block-group"><!-- wp:heading -->
