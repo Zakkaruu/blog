@@ -2,7 +2,6 @@
 layout: post
 title: What's to Come and What's the Hold Up
 date: 2021-04-28 21:17
-author: zakkaru
 ---
 <!-- wp:paragraph -->
 <p>When I first threw down a little money to get this blog started, <strong>I was ready to start writing that day</strong>...</p>
