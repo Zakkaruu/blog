@@ -2,7 +2,6 @@
 layout: post
 title: Using BackBlaze B2 Storage as a Synchronization Target for Joplin
 date: 2022-02-19 23:15
-author: zakkaru
 ---
 <!-- wp:heading -->
 <h2 id="introduction">Introduction</h2>
