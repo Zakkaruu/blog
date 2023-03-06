@@ -2,7 +2,6 @@
 layout: post
 title: Setting up a Trunk Port for use with VMware Workstation
 date: 2021-06-16 15:02
-author: zakkaru
 ---
 <!-- wp:heading -->
 <h2>Introduction</h2>
