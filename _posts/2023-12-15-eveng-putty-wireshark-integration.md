@@ -94,7 +94,7 @@ Windows Registry Editor Version 5.00
 
 # Wireshark Wrapper Batch File
 
-The next text block is what was previously referenced and is actually saved in the PuTTY install location.
+The next code block is what was previously referenced and is actually saved in the PuTTY install location.
 
 Special Mention:
 - The `USERNAME` and `PASSWORD` `SET` commands are your **EVE-NG login credentials**. So whatever you use to SSH into your EVE-NG install and manage the system is what you would use here. I personally use the VM version and provide the VM credentials.
