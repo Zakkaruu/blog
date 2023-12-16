@@ -29,7 +29,7 @@ Instead of referencing the EVE-NG installed versions, I pointed them at the alre
 
 IE: `C:\Program Files\PuTTY\putty.exe`
 
-Save the below text block in a `.reg` file and install/open it **as admin** to merge it into your registry.
+Save the below code block in a `.reg` file and install/open it **as admin** to merge it into your registry.
 
 *EVE-NG Putty Registry File*
 ```text
@@ -72,7 +72,7 @@ Windows Registry Editor Version 5.00
 
 Below, the `HKEY_CLASSES_ROOT\capture\shell\open\command` file location can be anywhere you want to reference. I personally just put the file in the PuTTY install location.
 
-Also, save the following text block in a `.reg` file and install/open it **as admin** to merge it into your registry.
+Also, save the following code block in a `.reg` file and install/open it **as admin** to merge it into your registry.
 
 *EVE-NG Wireshark Registry File*
 ```text
@@ -99,7 +99,7 @@ The next text block is what was previously referenced and is actually saved in t
 Special Mention:
 - The `USERNAME` and `PASSWORD` `SET` commands are your **EVE-NG login credentials**. So whatever you use to SSH into your EVE-NG install and manage the system is what you would use here. I personally use the VM version and provide the VM credentials.
 
-Save the following text block as a `.bat` file with the name and location specified in the Wireshark Registry file above.
+Save the following code block as a `.bat` file with the name and location specified in the Wireshark Registry file above.
 
 *EVE-NG Wireshark Wrapper Batch File*
 ```cmd
