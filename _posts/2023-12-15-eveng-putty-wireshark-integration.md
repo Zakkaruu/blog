@@ -8,7 +8,7 @@ title: EVE-NG PuTTY & Wireshark Windows Integration
 
 I have been using EVE-NG to do some labbing for JNCIS and CCNP studies. I've found that their integration pack installs older versions of `PuTTY` and `Wireshark`. I wanted to use my already installed versions. To do so, I analyzed the provided registry and batch files in the integration pack to see what options need to be changed.
 
-*Note: Please use the following instructions and files at your own discretion.*
+*Note: Please use the following instructions and files at your own discretion. ALWAYS BACKUP YOUR REGISTRY BEFORE MODIFYING IT.*
 
 ***
 
