@@ -119,6 +119,12 @@ ECHO "Connecting to %USERNAME%@%HOST%..."
 
 ***
 
+# One Last Thing...
+
+If you have never connected to EVE-NG over SSH, you will need to do so and add the EVE-NG host hey to your **known hosts**. I'm not 100% sure, but I personally just connect with both `putty.exe` and `plink.exe` (installed alongside PuTTY) and add the key. If you do not, you will get an error.
+
+***
+
 # Conclusion
 
 After saving and running the `.reg` files and saving the **Wireshark** `.bat` file in the appropriate location, you will be able to use the Native Console in EVE-NG with your existing Wireshark and PuTTY installations.
@@ -128,4 +134,6 @@ After saving and running the `.reg` files and saving the **Wireshark** `.bat` fi
 # Changelog
 
 - **Initial Release**
-  - 2023-12-15 
+  - 2023-12-15
+- **Add section on connecting to add EVE-NG SSH key to known hosts.
+  - 2023-12-16
