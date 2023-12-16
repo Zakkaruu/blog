@@ -135,5 +135,5 @@ After saving and running the `.reg` files and saving the **Wireshark** `.bat` fi
 
 - **Initial Release**
   - 2023-12-15
-- **Add section on connecting to add EVE-NG SSH key to known hosts.
+- **Add section on connecting to add EVE-NG SSH key to known hosts.**
   - 2023-12-16
