@@ -36,14 +36,14 @@ This project quickly became more than I expected. It was my first major project,
 
 ```powershell
 Add-DhcpServerv4Scope -StartRange 10.1.128.2 -EndRange 10.1.129.254 -SubnetMask 255.255.254.0 -Name "SITE_WIRELESS_SSID1" -LeaseDuration 0:08:00
-
-Set-DhcpServerv4OptionValue -ScopeId 10.1.128.0 -DnsServer 10.0.8.5,10.0.8.6 -DnsDomain "contoso.com" -Router 10.1.128.1 -Force</code></pre>
+Set-DhcpServerv4OptionValue -ScopeId 10.1.128.0 -DnsServer 10.0.8.5,10.0.8.6 -DnsDomain "contoso.com" -Router 10.1.128.1 -Force
 ```
 
 I decided to use /23 networks instead of the previous /21s. "But Zach, I thought you wanted to make the broadcast domains<sup>13</sup> smaller?" I did, but I am also lazy and wanted to leave room for pre-planned growth. By choosing a /23 for each new network, I can pair them down as needed. Since this address space has never been in use, I took the easy route. 👍
 
-<!-- wp:image {"id":62,"sizeSlug":"large","linkDestination":"none"} -->
-![](/images/2021-05-20_i3.png) After segmentation, you can see each of the individual L3 switches are in their own broadcast domains. The exception is Area 5, which did not house any wireless traffic and was significantly smaller.
+![](/images/2021-05-20_i3.png)
+
+After segmentation, you can see each of the individual L3 switches are in their own broadcast domains. The exception is Area 5, which did not house any wireless traffic and was significantly smaller.
 
 ## Deployment
 
