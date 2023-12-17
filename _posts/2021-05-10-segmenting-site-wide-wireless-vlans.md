@@ -62,13 +62,13 @@ date: 2021-05-10 13:05
 <p><strong>This project quickly became more than I expected</strong>. It was my <em>first </em>major project, and I intended to <em>get it right the first time</em>. By breaking up the site-wide VLANs, I now needed <strong>3 VLANs and DHCP</strong><sup>11</sup><strong> scopes per building</strong>. This <strong>more than doubled </strong>the amount of DHCP scopes already in use. Luckily, PowerShell<sup>12</sup> made this process easy using a script.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:code {"style":{"typography":{"fontSize":"14px"}}} -->
-<pre class="wp-block-code" style="font-size:14px;"><code><p class="has-background-color has-text-color has-background" style="background-color:#012456;"><span style="text-decoration:underline;"><strong>Sample Powershell Script</strong></span>
 
+`Sample Powershell Script`
+```powershell
 Add-DhcpServerv4Scope -StartRange 10.1.128.2 -EndRange 10.1.129.254 -SubnetMask 255.255.254.0 -Name "SITE_WIRELESS_SSID1" -LeaseDuration 0:08:00
 
 Set-DhcpServerv4OptionValue -ScopeId 10.1.128.0 -DnsServer 10.0.8.5,10.0.8.6 -DnsDomain "contoso.com" -Router 10.1.128.1 -Force</p></code></pre>
-<!-- /wp:code -->
+```
 
 <!-- wp:paragraph -->
 <p>I decided to use /23 networks instead of the previous /21s. <em>"But Zach, I thought you wanted to make the broadcast domains<sup>13</sup> smaller?"</em> I did, but I am also lazy and wanted to leave room for pre-planned growth. By choosing a /23 for each new network, I can pair them down as needed. Since this address space has never been in use, I took the easy route. 👍</p>
@@ -88,10 +88,9 @@ Set-DhcpServerv4OptionValue -ScopeId 10.1.128.0 -DnsServer 10.0.8.5,10.0.8.6 -Dn
 <p>During the week of deployment, I preloaded all new configurations and verified connectivity during the day. Configuration involved addressing<sup>14</sup>, helper addresses<sup>15</sup>, OSPF<sup>16</sup> inclusion, etc. A co-worker and I planned to deploy this within <strong>2-3 hours</strong> at the end of a Friday.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:code {"style":{"typography":{"fontSize":"14px"}}} -->
-<pre class="wp-block-code" style="font-size:14px;"><code><p class="has-background-color has-text-color has-background" style="background-color:#000000;"><strong><span style="text-decoration:underline;">Sample Juniper Configuration</span></strong>
-
-<strong>show vlans | display set</strong>
+`Sample Juniper Configuration`
+```text
+show vlans | display set
 set vlans SSID1 vlan-id 5
 set vlans SSID1 l3-interface irb.5
 set vlans SSID2 vlan-id 6
@@ -99,25 +98,25 @@ set vlans SSID2 l3-interface irb.6
 set vlans SSID3 vlan-id 7
 set vlans SSID3 l3-interface irb.7
 
-<strong>show interfaces irb | display set</strong>
+show interfaces irb | display set
 set interfaces irb unit 5 family inet address 10.1.128.1/23
 set interfaces irb unit 6 family inet address 10.1.164.1/23
 set interfaces irb unit 7 family inet address 10.1.200.1/23
 
-<strong>show forwarding-options dhcp-relay | display set</strong>
+show forwarding-options dhcp-relay | display set
 set forwarding-options dhcp-relay server-group SITE_DC 10.0.8.5
 set forwarding-options dhcp-relay group SITE_DC active-server-group SITE_DC
 set forwarding-options dhcp-relay group SITE_DC interface irb.5
 set forwarding-options dhcp-relay group SITE_DC interface irb.6
 set forwarding-options dhcp-relay group SITE_DC interface irb.7
 
-<strong>show protocols ospf area 1 | display set</strong>
+show protocols ospf area 1 | display set
 set protocols ospf area 0.0.0.1 interface irb.5 passive
 set protocols ospf area 0.0.0.1 interface irb.6 passive
 set protocols ospf area 0.0.0.1 interface irb.7 passive
 
-<em>Note: IP addresses and VLANs have been changed</em> <em>and are not reflective of the actual configurations.</em></p></code></pre>
-<!-- /wp:code -->
+Note: IP addresses and VLANs have been changed and are not reflective of the actual configurations.
+```
 
 <!-- wp:paragraph -->
 <p>There were some hurdles the night of deployment. We wanted to standardize the server IP design across sites, in addition to the wireless changes. That caused some other issues. Implementing the new VLANs was a matter of moving APs into groups based on closet within the wireless controller<sup>17</sup>. Logic in the controller was then used to put each SSID into the proper VLAN.</p>
