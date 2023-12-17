@@ -115,7 +115,7 @@ Do not do too much at one time.Planning pays huge dividends (I couldn't imagine 
 11. DHCP: Dynamic Host Configuration Protocol. Used to automatically configure network information on host devices.
 12. PowerShell: A scripting language typically used for configuration tasks; created by Microsoft.
 13. Broadcast Domain: A logical scope of devices that will hear broadcast traffic.
-14. [IP] Addressing: Layer 3 information used to route packets. This includes IP addresses and subnet masks.
+14. IP Addressing: Layer 3 information used to route packets. This includes IP addresses and subnet masks.
 15. Helper Address: In this blog post, a helper address is used to forward DHCP traffic to the DHCP server, that would otherwise not reach it. DHCP broadcasts can be sent to other networks, allowing hosts to receive addressing information from a centralized server.
 16. OSPF: Open Shortest Path First. A link-state dynamic routing protocol. It floods various link state advertisement messages containing routing information to all participating neighbors. An area concept is used to logically separate and control routing data. Each router uses its link state database to calculate the best paths to destinations using <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's algorithm</a>.
 17. Wireless Controller: A device (or cloud solution) that controls and configures all APs in a centralized location. Typically, uses <a href="https://en.wikipedia.org/wiki/CAPWAP">CAPWAP </a>tunnels from APs to the controller.
