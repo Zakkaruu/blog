@@ -51,12 +51,12 @@ date: 2021-06-16 15:02
 <p>Now that the driver is installed, hop into your switch. You'll see my access port configuration below. We're going to convert the <strong>ge-0/0/13</strong> interface from an access port to a trunk port.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:code {"style":{"typography":{"fontSize":"14px"}}} -->
-<pre class="wp-block-code" style="font-size:14px;"><code><p class="has-background-color has-text-color has-background" style="background-color:#000000;"><strong>show interfaces ge-0/0/13 | display set</strong>
+```text
+show interfaces ge-0/0/13 | display set
 set interfaces ge-0/0/13 description "Access Port"
 set interfaces ge-0/0/13 unit 0 family ethernet-switching interface-mode access
-set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members WIRED</p></code></pre>
-<!-- /wp:code -->
+set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members WIRED
+```
 
 <!-- wp:paragraph -->
 <p>This port is configured as a member of the WIRED VLAN, but I want to test other networks from within VMware Workstation. For instance, I have a VM that is setup as a Student Windows 10 device. When the VM is a part of the STUDENT VLAN, I can test ACLs, QoS, and emulate how a device will act in its entirety. I also add other VLANs to allow for testing from staff devices and the guest network. </p>
@@ -66,16 +66,16 @@ set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members WIRED</p>
 <p>I set the WIRED VLAN (1122) as the native VLAN so that any wired device can still connect. I've had issues with NIC drivers crashing. This has left me disconnected due to VLAN trunking being disabled when the driver recovers. By using the native VLAN, I always fall back to a working state. <em>Note: A newer driver version has fixed the crashing issue (26.3).</em></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:code {"style":{"typography":{"fontSize":"14px"}}} -->
-<pre class="wp-block-code" style="font-size:14px;"><code><p class="has-background-color has-text-color has-background" style="background-color:#000000;"><strong>show interfaces ge-0/0/13 | display set</strong>
+```text
+show interfaces ge-0/0/13 | display set
 set interfaces ge-0/0/13 description "VM Trunk"
 set interfaces ge-0/0/13 native-vlan-id 1122
 set interfaces ge-0/0/13 unit 0 family ethernet-switching interface-mode trunk
 set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members WIRED
 set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members STUDENT
 set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members INSTRUCTION
-set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members GUEST</p></code></pre>
-<!-- /wp:code -->
+set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members GUEST
+```
 
 <!-- wp:heading -->
 <h2>VLAN Virtual Adapters</h2>
