@@ -6,7 +6,7 @@ date: 2021-06-16 15:02
 
 # Update 2024-02-09
 
-I recently tried to set something like this up in Windows 11 and found out that Intel does not support it. I a bit of time looking for a workaround and did not find anything convenient. There seems to be methods if you use Windows Server and a combination of NIC teaming and VLANs, but I didn't feel it was really a good solution.
+I recently tried to set something like this up in Windows 11 and found out that Intel does not support it. I took a bit of time looking for a workaround and did not find anything convenient. There seems to be methods if you use Windows Server and a combination of NIC teaming and VLANs, but I didn't feel it was really a good solution.
 
 For more information, [see this link from Intel](https://www.intel.com/content/www/us/en/support/articles/000087483/ethernet-products.html).
 
