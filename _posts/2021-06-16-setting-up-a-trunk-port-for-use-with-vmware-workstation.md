@@ -4,6 +4,20 @@ title: Setting up a Trunk Port for use with VMware Workstation
 date: 2021-06-16 15:02
 ---
 
+# Update 2024-02-09
+
+I recently tried to set something like this up in Windows 11 and found out that Intel does not support it. I a bit of time looking for a workaround and did not find anything convenient. There seems to be methods if you use Windows Server and a combination of NIC teaming and VLANs, but I didn't feel it was really a good solution.
+
+For more information, [see this link from Intel](https://www.intel.com/content/www/us/en/support/articles/000087483/ethernet-products.html).
+
+> Intel® PROSet and Intel® Advanced Network Services will not be supported on Microsoft Windows* 11 or future Microsoft client operating system updates. This includes the Intel® Advanced Network Services features that allow the creation of Intel® Advanced Network Services Teams and VLANs. Intel driver support for Microsoft Windows 11 will be available.
+>
+> Microsoft* Windows 10 is the final Microsoft Windows Operating System to support Intel PROSet and Intel® Advanced Network Services.
+>
+> The Intel Ethernet team values our customers, and we appreciate your feedback. Contact Intel Customer Support if you have any questions.
+
+Long story short, if your on-board NIC is Intel, your best bet would be to get a Realtek USB adapter and use their [Ethernet Diagnostic Program](https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software) to do the same thing (Windows 11 IS supported).
+
 ## Introduction
 
 I could not do my job without a lab environment. I do my utmost to ensure that whatever changes I make will not have unintended consequences. Do they happen anyways? Yes. Do they happen less frequently? Also yes. This post will show how to create a trunk port, how to setup the NIC in Windows 10, and how to bridge the virtual adapters to virtual networks within VMware Workstation.
@@ -115,3 +129,5 @@ Select the radial button for Custom: and then choose the connection you want to 
   - 2021/06/16
 - Updated Software with Windows 10 Pro
   - 2021/07/10
+- Add Update section
+  - 2024/02/09
