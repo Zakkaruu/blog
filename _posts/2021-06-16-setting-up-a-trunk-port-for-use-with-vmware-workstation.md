@@ -16,7 +16,7 @@ For more information, [see this link from Intel](https://www.intel.com/content/w
 >
 > The Intel Ethernet team values our customers, and we appreciate your feedback. Contact Intel Customer Support if you have any questions.
 
-Long story short, if your on-board NIC is Intel, your best bet would be to get a Realtek USB adapter and use their [Ethernet Diagnostic Program](https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software) to do the same thing (Windows 11 IS supported).
+Long story short, if your on-board NIC is Intel, your best bet would be to get a Realtek USB NIC and use their [Ethernet Diagnostic Program](https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software) to do the same thing (Windows 11 IS supported).
 
 ## Introduction
 
